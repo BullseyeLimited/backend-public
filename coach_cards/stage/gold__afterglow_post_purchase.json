@@ -1,0 +1,23 @@
+{
+  "type": "stage_detector",
+  "name": "gold__afterglow_post_purchase",
+  "version": "0.2",
+  "inputs": "as_spec_v0_2",
+  "match": {
+    "must": [
+      "tier_is('gold')",
+      "recent_paid(24)"
+    ],
+    "should": [
+      { "if": "gratitude_present()", "add": 2 },
+      { "if": "affection_present()", "add": 1 },
+      { "if": "features.energy >= 0.60", "add": 1 },
+      { "if": "!price_intent()", "add": 1 }
+    ],
+    "must_not": [
+      "features.negativity > 0.4",
+      "explicit_request()"
+    ]
+  },
+  "thresholds": { "choose_if_score_gte": 3, "priority": 10 }
+}

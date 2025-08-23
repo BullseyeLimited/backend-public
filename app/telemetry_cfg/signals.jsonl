@@ -1,0 +1,215 @@
+{"id":"greeting.basic","any_regex":["\\b(hi|hey|hello|hiya|yo|sup|sup\\?|howdy)\\b"],"weights":{"S1":3,"S2":1}}
+{"id":"greeting.stretch","any_regex":["\\bhe+y+\\b","\\bhi+y+a?\\b"],"weights":{"S1":2}}
+{"id":"greeting.time_of_day","any_regex":["\\b(good\\s+(morning|afternoon|evening|night))\\b"],"weights":{"S1":3,"G2":1}}
+{"id":"greeting.named","any_regex":["\\b(hi|hey|hello)\\s+[A-Za-z]{2,}\\b"],"weights":{"S1":3,"S2":1}}
+{"id":"greeting.wave_emoji","any_regex":["👋"],"weights":{"S1":2}}
+{"id":"greeting.meet_you","any_regex":["\\b(nice to meet you|pleased to meet you)\\b"],"weights":{"S1":2}}
+{"id":"smalltalk.open","any_regex":["\\b(how('?|’)s it going|hru|how are you|what('?|’)s up)\\b"],"weights":{"S1":2,"S2":1}}
+
+{"id":"authenticity.check","any_regex":["\\bare you (real|actually you)\\b","\\bis this really you\\b","\\bno (bot|ai)\\b"],"weights":{"S2":2}}
+{"id":"boundary.check","any_regex":["\\b(is it ok if|what('?|’)s okay to ask|boundar(y|ies)|limits?)\\b"],"weights":{"S2":2}}
+{"id":"ask.profile_or_content","any_regex":["\\bwhat (do you (post|share)|do you usually post|kind of (content|stuff))\\b","\\bhow long have you been on (here|this)\\b"],"weights":{"S2":3}}
+{"id":"ask.general","any_regex":["\\b(can i ask|mind if i ask|could i ask)\\b","\\bwhat do you (like|do)\\b"],"weights":{"S2":3,"S3":1}}
+{"id":"ask.location_time","any_regex":["\\b(where are you from|where do you live|what('?|’)s your time ?zone)\\b"],"weights":{"S2":2,"S3":1}}
+{"id":"ask.how_it_works","any_regex":["\\bhow (does|do) this (work|page work)|what('?|’)s the deal here\\b"],"weights":{"S2":3,"S5":1}}
+{"id":"ask.post_frequency","any_regex":["\\bhow often (do you post|you post)\\b","\\bdaily (posts|content)\\b"],"weights":{"S2":2,"G2":1}}
+
+{"id":"share.self_info","any_regex":["\\b(i('?|’)m|i am)\\s+(from|in|working|at|into|a|an)\\b","\\bmy (job|work|hobby|dog|cat|pet|kids?)\\b"],"weights":{"S3":3,"G2":1}}
+{"id":"share.schedule","any_regex":["\\b(i (work|am) (nights|night shift|late|mornings|weekends))\\b"],"weights":{"S3":2,"D2":1}}
+{"id":"callback.memory","any_regex":["\\byou (mentioned|said)\\b","\\b(as you|like you) said\\b","\\bfrom (ig|instagram)\\b"],"weights":{"S3":3,"G2":1}}
+{"id":"callback.deep_specific","any_regex":["\\b(as|like) we (talked|said) (yesterday|before|last time)\\b"],"weights":{"D3":2,"E4":2}}
+
+{"id":"platform.migration_ig","any_regex":["\\b(ig|instagram|insta) (dm|dms?|messages?)?\\b","\\bfrom (ig|instagram)\\b"],"weights":{"S3":2,"G2":1}}
+{"id":"platform.migration_snap","any_regex":["\\b(snap|snapchat)\\b"],"weights":{"S3":1}}
+{"id":"platform.migration_twitter","any_regex":["\\b(x|twitter|tweet)\\b"],"weights":{"S3":1}}
+{"id":"platform.migration_reddit","any_regex":["(?:\\breddit\\b|\\br/\\w+\\b)"],"weights":{"S3":1}}
+{"id":"platform.onlyfans","any_regex":["\\b(onlyfans|of)\\b"],"weights":{"S1":1,"S2":1}}
+
+{"id":"compliment.looks","any_regex":["\\b(you('?|’)re (gorgeous|beautiful|pretty|hot|sexy)|love your (eyes|smile|hair|tattoos?))\\b"],"weights":{"S3":2,"G2":2}}
+{"id":"compliment.personality","any_regex":["\\b(you('?|’)re (sweet|kind|funny|cute personality))\\b"],"weights":{"S3":2,"G2":1}}
+{"id":"compliment.profile","any_regex":["\\b(like|love) your (profile|bio|vibe|aesthetic)\\b"],"weights":{"S2":2,"G2":1}}
+{"id":"compliment.content","any_regex":["\\b(love(d)?|enjoy(ed)?)\\b.*\\b(set|post|content|video|photo(s)?)\\b"],"weights":{"G2":3}}
+
+{"id":"affection.any","any_regex":["\\b(babe|baby|bb|hun|honey|sweetie|sweetheart|love|lover|cutie|handsome|gorgeous|angel|dear|darling)\\b","\\bbabe+([ey])?\\b"],"weights":{"S3":2,"G2":1}}
+{"id":"affection.spanish","any_regex":["\\b(mi amor|cariñ[oa]|guap[oa]|lind[oa])\\b"],"weights":{"S3":2,"G2":1}}
+{"id":"affection.french","any_regex":["\\b(mon amour|ma belle|mon beau|chérie|cheri|ma chérie)\\b"],"weights":{"S3":2,"G2":1}}
+
+{"id":"petname.daddy","any_regex":["\\b(?:my\\s+)?daddy\\b"],"none_regex":["\\bdaddy\\s+issues\\b"],"weights":{"S4":1,"G2":1}}
+{"id":"petname.mommy","any_regex":["\\b(?:my\\s+)?mommy\\b"],"weights":{"S4":1,"G2":1}}
+{"id":"petname.king","any_regex":["\\b(?:my\\s+)?king\\b"],"none_regex":["\\bkingdom\\b","\\bking's\\b","\\bkingston\\b"],"weights":{"S3":1,"G2":1}}
+{"id":"petname.queen","any_regex":["\\b(?:my\\s+)?queen\\b"],"none_regex":["\\bqueenstown\\b"],"weights":{"S3":1,"G2":1}}
+{"id":"petname.sir","any_regex":["\\b(?:yes\\s+)?sir\\b"],"weights":{"S4":1,"G2":1}}
+{"id":"petname.prince","any_regex":["\\bprince\\b"],"none_regex":["\\bprinceton\\b"],"weights":{"S3":1}}
+{"id":"petname.princess","any_regex":["\\bprincess\\b"],"none_regex":["\\bprincess\\s+diana\\b","\\bprincess\\s+peach\\b","\\bprincess\\s+diaries\\b"],"weights":{"S3":1}}
+{"id":"petname.any","any_regex":["\\b(babe|baby|love|luv|sweet(heart)?|hun|honey|cutie|princess|prince|queen|king|handsome|beautiful|gorgeous|wifey|hubby)\\b"],"none_regex":["\\bkingdom\\b","\\bqueenstown\\b","\\b(princess|prince) (peach|diaries)\\b"],"weights":{"D4":3,"E1":1}}
+
+{"id":"flirt.light","any_regex":["\\b(you('?|’)re cute|you make me (smile|blush)|blush(ing)?)\\b"],"weights":{"S4":2,"S3":1}}
+{"id":"flirt.emoji_core","any_regex":["[😉😏🥰😊😍]"],"weights":{"S4":2,"G2":1}}
+{"id":"flirt.look_at","any_regex":["\\blook at you\\b","\\bthose (eyes|lips)\\b","👀"],"weights":{"S4":2,"S3":1}}
+{"id":"flirt.playful_dare","any_regex":["\\bbet you won('t|’t)|dare you\\b"],"weights":{"S4":2,"G3":1}}
+{"id":"flirt.chemistry","any_regex":["\\b(vibes?|chemistry|spark)\\b"],"weights":{"S4":2,"G2":1}}
+{"id":"flirt.light_plus","any_regex":["\\b(can('?|’)t stop thinking (about|of) you|you turn me on|i('?|’)m blushing)\\b"],"weights":{"D5":3,"D4":1}}
+
+{"id":"sexual.cue_mild","any_regex":["\\b(turn(ed)? on|horny|aroused)\\b","\\bturned me on\\b"],"weights":{"S4":2,"G2":1}}
+{"id":"sexual.cue_body","any_regex":["\\b(thighs?|lips?|neck|hips|waist|abs)\\b"],"weights":{"S4":1,"G2":1}}
+{"id":"explicit.request_soft","any_regex":["\\b(naked|nude(s)?)\\b","\\bsend (pics?|picture|photo|video)s?\\b"],"weights":{"S4":1,"S5":1,"G4":1}}
+{"id":"explicit.request_terms","any_regex":["\\b(NSFW|uncensored|explicit|topless|lingerie|pant(y|ies))\\b"],"weights":{"S4":1,"S5":1,"G3":1}}
+{"id":"sext.invite_soft","any_regex":["\\b(sext|spice (it )?up|get (naughty|kinky))\\b"],"weights":{"D5":3,"E6":2}}
+{"id":"sext.describe_me","any_regex":["\\b(describe|tell) me (how|what) you (would|want to) (do|see)\\b"],"weights":{"D5":2,"E6":2}}
+{"id":"sext.story","any_regex":["\\b(tell\\s+me\\s+a\\s+(fantasy|story)|describe\\s+it\\s+for\\s+me)\\b"],"weights":{"D4":2,"E6":2}}
+{"id":"sex.trust.cues","any_regex":["\\b(our\\s+safe\\s+word|aftercare|go\\s+slow|take\\s+care\\s+of\\s+me)\\b"],"weights":{"D5":2,"E6":3}}
+
+{"id":"kink.submissive_cue","any_regex":["\\b(i('?|’)ll be (good|your (boy|man)))\\b","\\bteach me\\b"],"weights":{"S4":2,"G2":1}}
+{"id":"kink.dominant_cue","any_regex":["\\bcall me (sir|daddy)\\b","\\bi like being in charge\\b"],"weights":{"S4":1,"G2":1}}
+{"id":"kink.brat_cue","any_regex":["\\b(brat|make me)\\b"],"weights":{"D5":1,"G2":1}}
+{"id":"kink.talk","any_regex":["\\b(kinks?|fantas(y|ies)|roleplay)\\b"],"weights":{"D4":2,"E6":2,"G3":1}}
+
+{"id":"mention.paid_content","any_regex":["\\b(vip|premium|exclusive|pay\\s?wall|subscription)\\b","\\b(customs?|bundle|menu)\\b"],"weights":{"S5":2,"G3":2}}
+{"id":"menu.custom","any_regex":["\\b(custom(s)?|menu|rates|price list|price\\s?list)\\b"],"weights":{"S5":3,"G3":3}}
+{"id":"menu.bundle_deal","any_regex":["\\b(bundle|pack|set deal|2 for 1|sale)\\b"],"weights":{"S5":2,"G3":3}}
+{"id":"scope.sample","any_regex":["\\b(could i see a (sample|preview)|what do i get|example?)\\b","\\bblur(red)? preview\\b"],"weights":{"S5":2,"G4":3}}
+{"id":"question.price","any_regex":["\\b(how much|price|cost|what do you charge|how (many|much) \\$)\\b","\\b(price)?\\s?\\$\\s?\\d{1,4}\\b"],"weights":{"S5":3,"G3":3}}
+{"id":"question.sub_price","any_regex":["\\b(sub(scription)? price|how much (is|for) sub)\\b"],"weights":{"S5":3,"G3":2}}
+{"id":"question.payment_method","any_regex":["\\b(cash ?app|paypal|venmo|apple pay|google pay|card|credit|debit|visa|mastercard)\\b","\\bhow (do i|to) pay\\b"],"weights":{"S5":2,"G3":2}}
+{"id":"question.tip_gift","any_regex":["\\b(tip|tipping|gift|present|spoil you)\\b"],"weights":{"S5":2,"G3":2}}
+{"id":"question.voice_or_call","any_regex":["\\b(voice (note|message)|audio (msg|message)|call|vc|video call)\\b"],"weights":{"G3":2,"D7":1}}
+
+{"id":"cta.soft","any_regex":["\\bshould i\\b","\\bworth it\\b","\\bconvince me\\b"],"weights":{"S5":1,"G3":1}}
+{"id":"cta.fomo","any_regex":["\\b(before it (expires|goes)|limited|last chance)\\b"],"weights":{"S5":1,"G5":2}}
+{"id":"cta.two_choice","any_regex":["\\b(y/n\\?|yes or no\\?)\\b"],"weights":{"S5":1,"G5":1}}
+{"id":"cta.microcommit","any_regex":["\\bjust (a|one) peek\\b","\\bquick (look|preview)\\b"],"weights":{"S5":1,"G4":1}}
+{"id":"cta.emotional_pull","any_regex":["\\b(do it for me|just for me|make me happy)\\b"],"weights":{"S5":1,"G5":2}}
+
+{"id":"express.hesitation","any_regex":["\\b(i('?|’)m (nervous|not sure)|maybe|thinking about it|let me think|idk)\\b"],"weights":{"S5":1,"S6":1}}
+{"id":"stall.loop","any_regex":["\\b(maybe later|i('?|’)ll think about it|another time)\\b"],"weights":{"S6":2}}
+{"id":"objection.value","any_regex":["\\b(too expensive|overpriced|not worth( it)?|not getting (enough|what i expected)|disappointed)\\b"],"weights":{"S6":3,"G8":4}}
+{"id":"freebie.request","any_regex":["\\b(free (sample|preview)|show me first for free|for free?)\\b"],"weights":{"S6":3,"G4":2}}
+{"id":"transaction.only","any_regex":["\\bsend (nudes?|pics?) now\\b","\\bright now for free\\b"],"weights":{"S1":-2,"S2":-2,"S3":-2,"G4":2}}
+
+{"id":"decision.greenlight","any_regex":["\\b(let('?|’)s do this|do it|send it|ok(ay)? i('?|’)ll do it|i('?|’)m going to|i will do it|deal)\\b"],"weights":{"S7":3,"G5":3}}
+{"id":"action.in_progress","any_regex":["\\b(grabbing my card|entering (my )?card|subscribing (now|as we speak)|unlocking now|sending now)\\b"],"weights":{"S7":2,"G5":2}}
+{"id":"payment.confirmed","any_regex":["\\b(i just (subscribed|joined)|just (sent|tipped|bought|unlocked)|payment (went through|confirmed)|got the confirmation)\\b"],"weights":{"S8":5,"G6":5,"G1":2}}
+{"id":"future.promise_only","any_regex":["\\b(i('?|’)ll (subscribe|tip) (later|next)|later tonight i promise|tomorrow for sure)\\b"],"weights":{"S7":-1,"S8":-3}}
+
+{"id":"subscriber.welcome","any_regex":["\\b(welcome|glad to have you|happy you(?:(?:’|')re| are) here)\\b"],"weights":{"G1":3}}
+{"id":"access.now","any_regex":["\\b(i can see your posts|have access now|it (works|is working) now)\\b"],"weights":{"G1":3}}
+{"id":"thanks.support","any_regex":["\\b(thanks for (subscribing|supporting)|appreciate your support|ty for sub)\\b"],"weights":{"G1":2,"G2":1}}
+{"id":"praise.content","any_regex":["\\b(love(d)?|enjoy(ed)?)\\b.*\\b(set|post|content|video|photo(s)?)\\b"],"weights":{"G2":3}}
+{"id":"routine.chat","any_regex":["\\b(what('?|’)s up today|how('?|’)s your day going|how was work)\\b"],"weights":{"G2":1}}
+{"id":"ask.preference","any_regex":["\\b(could you do|any chance of|i('?|’)d like to see|can you make)\\b"],"weights":{"G2":2,"G3":1}}
+{"id":"repeat.buy","any_regex":["\\b(tipped again|another tip|unlocked another|bought another)\\b"],"weights":{"G6":4}}
+{"id":"renewal.confirmed","any_regex":["\\b(renew(ed)?|another month|reupped|re-upped)\\b"],"weights":{"G6":2,"G7":4}}
+{"id":"renewal.planning","any_regex":["\\b(stay another month|keep this going|next month)\\b"],"weights":{"G7":3}}
+
+{"id":"churn.cancel_talk","any_regex":["\\b(cancel(l)?(ing)?|thinking about cancelling|might leave|unsub(scribe)?|ending this)\\b"],"weights":{"G8":5}}
+{"id":"refund.chargeback","any_regex":["\\b(refund|chargeback|money back|dispute)\\b"],"weights":{"G8":4}}
+{"id":"complaint.support","any_regex":["\\b(support (never|not) (repl(y|ied)|helpful)|can('?|’)t (access|login))\\b"],"weights":{"G8":3}}
+{"id":"reconnect.apology","any_regex":["\\b(sorry about earlier|my bad|didn('?|’)t mean to be|sorry i (vanished|disappeared))\\b"],"weights":{"S9":3,"G9":3}}
+{"id":"reconnect.context","any_regex":["\\b(was (busy|at work|with family)|fell asleep|long day)\\b"],"weights":{"S9":2,"G9":2}}
+
+{"id":"emoji.hearts_kiss_fire","any_regex":["[❤️💖💘💋🔥]"],"weights":{"S4":1,"G2":1,"D1":1,"E1":1}}
+{"id":"emoji.heart_eyes","any_regex":["😍"],"weights":{"S4":1,"G2":1,"D1":1}}
+{"id":"emoji.smirk","any_regex":["😏"],"weights":{"S4":2}}
+{"id":"emoji.eyes","any_regex":["👀"],"weights":{"S4":2}}
+{"id":"emoji.droplets","any_regex":["💦"],"weights":{"S4":1,"G2":1}}
+{"id":"emoji.pleading","any_regex":["🥺"],"weights":{"S4":1,"G3":1}}
+{"id":"emoji.sparkles","any_regex":["✨"],"weights":{"S4":1,"G2":1}}
+
+{"id":"tone.enthused","any_regex":["\\b(omg|oh my god|wow+|can('?|’)t wait)\\b"],"weights":{"S4":1,"G2":1}}
+{"id":"tone.negative_soft","any_regex":["\\b(meh|idc|idk)\\b"],"weights":{"S6":1,"G8":1}}
+{"id":"tone.rude","any_regex":["\\b(sc(am|ummy)|rip ?off|fake)\\b"],"weights":{"S6":1,"G8":2}}
+
+{"id":"safety.neg","any_regex":["\\b(age\\s*\\?|how old are you|under\\s?18)\\b"],"weights":{"S1":-5,"S2":-5,"G2":-5,"D1":-5,"E1":-5}}
+{"id":"safety.privacy","any_regex":["\\b(privacy|personal info|don('?|’)t share)\\b"],"weights":{"S1":-2,"S2":-2,"G2":-2,"D2":-2,"E2":-2}}
+{"id":"safety.scam","any_regex":["\\b(sc(am|ammer)|fake|scammy)\\b"],"weights":{"S1":-3,"S2":-3,"G2":-3,"D2":-2}}
+{"id":"safety.bot","any_regex":["\\b(bot|ai|automated)\\b"],"weights":{"S1":-4,"S2":-4,"G2":-4,"D2":-3}}
+{"id":"safety.no_face","any_regex":["\\b(no face|(don'?|’)t show) (face|my face)\\b"],"weights":{"G4":1,"D5":1}}
+
+{"id":"affection.miss_you","any_regex":["\\b(miss you|missing you|thought of you|thinking of you)\\b"],"weights":{"D1":3,"D4":1,"E1":1}}
+{"id":"love.emoji.strong","any_regex":["[❤️🩷💖💘💞💓💗💕💝🥰😘💋]"],"weights":{"D1":2,"E1":2,"G2":1}}
+{"id":"affection.words.strong","any_regex":["\\b(i\\s*(love|adore)\\s*you|my\\s*love|love\\s*u)\\b"],"weights":{"D1":2,"E1":2,"E3":1}}
+{"id":"miss.you","any_regex":["\\b(i\\s+miss\\s+you|miss\\s+u)\\b"],"weights":{"D1":2,"E1":2}}
+{"id":"praise.partner","any_regex":["\\b(you\\s+make\\s+me\\s+(happy|smile)|you\\s+mean\\s+so\\s+much\\s+to\\s+me)\\b"],"weights":{"D1":2,"E1":2}}
+
+{"id":"ritual.gm","any_regex":["\\b(good\\s*morning|morning\\b|gm\\b)"],"none_regex":["morning wood"],"weights":{"D2":3,"E1":4}}
+{"id":"ritual.gn","any_regex":["\\b(good\\s*night|gn\\b|sleep (tight|well)|sweet dreams)\\b"],"weights":{"D2":3,"E1":4}}
+{"id":"checkin.day","any_regex":["\\b(how('?|’)s|how was)\\b.*\\b(day|work|shift|class|gym)\\b"],"weights":{"D2":3,"E1":2}}
+{"id":"time.anchor_evening","any_regex":["\\b(home now|back from work|made it home|drive safe)\\b"],"weights":{"D2":2,"E1":2}}
+
+{"id":"we_talk.pronouns","any_regex":["\\b(we|us|our|ours)\\b"],"none_regex":["\\bweird\\b","\\bowe\\b","\\bown\\b","\\bourselves\\b"],"weights":{"D4":2,"E4":3}}
+{"id":"we.frame","any_regex":["\\b(we('?|’)re|we\\s+should|let('?|’)s\\s+\\w+|our\\s+(thing|plan|joke|song|show|place))\\b"],"weights":{"D3":2,"E4":2,"D6":1}}
+{"id":"us.frame","any_regex":["\\b(us\\s+two|just\\s+us)\\b"],"weights":{"E4":2,"D8":1}}
+
+{"id":"support.rough_day","any_regex":["\\b(rough|long|hard) day\\b","\\b(stress(ed)?|anxious|anxiety|panic)\\b"],"weights":{"D6":3,"E3":2}}
+{"id":"support.i_got_you","any_regex":["\\b(i('?|’)ve got you|i got you|i('?|’)m here for you|always here)\\b"],"weights":{"D6":3,"E5":2}}
+{"id":"vent.permission","any_regex":["\\b(can i vent|need to vent|rant for a sec)\\b"],"weights":{"D6":3,"E3":2}}
+{"id":"comfort.physical_care","any_regex":["\\b(hot bath|blanket|tea and rest|cozy up)\\b"],"weights":{"E5":3,"D6":2}}
+{"id":"caretaker.check","any_regex":["\\b(did\\s+you\\s+(eat|sleep|drink\\s+water)|stay\\s+hydrated|take\\s+a\\s+break)\\b"],"weights":{"E5":3,"D5":1}}
+{"id":"care.safety","any_regex":["\\b(get\\s+home\\s+safe|drive\\s+safe|be\\s+careful)\\b"],"weights":{"E5":2}}
+{"id":"health.not_well","any_regex":["\\b(i('?|’)m (sick|ill|fever|cough|throwing up|migraine|hurt))\\b"],"weights":{"E5":4}}
+{"id":"health.talk","any_regex":["\\b(doctor|therapy|therapist|anxiety|depression|panic\\s+attack|meds?)\\b"],"weights":{"E3":3,"E5":2}}
+
+{"id":"plan.tonight_micro","any_regex":["\\b(let('?|’)s (watch|call|game|cook|do) (tonight|later))\\b"],"weights":{"D7":3,"E4":2}}
+{"id":"plan.tomorrow_weekend","any_regex":["\\b(let('?|’)s|we should)\\b.*\\b(tomorrow|this (week|weekend)|next (week|time))\\b"],"weights":{"D7":2,"E4":3}}
+{"id":"plan.date_night","any_regex":["\\b(date night|movie night|cook together|watch party)\\b"],"weights":{"D7":3,"E6":2}}
+{"id":"future.plan.nearterm","any_regex":["\\b(tonight|tomorrow|this\\s+weekend)\\b"],"weights":{"D6":2,"E2":2}}
+{"id":"future.seasonal","any_regex":["\\b(this (summer|fall|winter|spring)|for the holidays)\\b"],"weights":{"E4":3,"D7":1}}
+{"id":"future.long","any_regex":["\\b(next\\s+year|someday|in\\s+the\\s+future|grow\\s+old)\\b"],"weights":{"E4":3}}
+
+{"id":"ritual.anniv","any_regex":["\\b(anniversary|monthiversary|months? together)\\b"],"weights":{"D8":4,"E1":2}}
+{"id":"ritual.tradition","any_regex":["\\b(our tradition|every (night|morning)|same time (every|each))\\b"],"weights":{"D8":4,"E1":2}}
+{"id":"ritual.tradition_named","any_regex":["\\b(movie\\s+night|sunday\\s+ritual|our\\s+tradition)\\b"],"weights":{"E9":3,"D3":1}}
+{"id":"holiday.tradition","any_regex":["\\b(christmas|new\\s+year('?|’)s|valentine('?|’)s|birthday)\\b"],"weights":{"E9":3,"D7":2}}
+
+{"id":"celebrate.win_generic","any_regex":["\\b(i got (the )?(job|promotion|raise)|ace(d)? (it|the exam)|we (did it|made it))\\b"],"weights":{"E7":5,"D3":1}}
+{"id":"celebrate.milestone","any_regex":["\\b(proud\\s+of\\s+you|congrats|celebrate|so\\s+proud)\\b"],"weights":{"D7":2,"E9":1}}
+{"id":"celebrate.proud_of_you","any_regex":["\\b(proud of you|so proud)\\b"],"weights":{"E7":4,"D4":1}}
+
+{"id":"repair.apology","any_regex":["\\b(sorry (about|for)|my bad|i overreacted|i shouldn'?t have)\\b"],"weights":{"D9":4,"E8":3}}
+{"id":"repair.apology.strong","any_regex":["\\b(i('?|’)m\\s+sorry|my\\s+bad|forgive\\s+me)\\b"],"weights":{"D9":2,"E8":3}}
+{"id":"repair.check_bond","any_regex":["\\b(are we (ok|okay)|do we (feel|seem) off|did i upset you)\\b"],"weights":{"D9":3,"E8":4}}
+{"id":"reassure.seek","any_regex":["\\b(do you still (want|like|love) me|promise (me|us))\\b"],"weights":{"E8":3,"D9":2}}
+{"id":"reconnect","any_regex":["\\b(i\\s+missed\\s+you|sorry\\s+for\\s+ghosting|been\\s+away|back\\s+now)\\b"],"weights":{"D9":3,"E8":1}}
+
+{"id":"jealousy.light","any_regex":["\\b(talking\\s+to\\s+other\\s+(guys|girls)|only\\s+mine|mine\\s+only)\\b"],"weights":{"D8":3,"E8":2}}
+{"id":"jealousy/assurance","any_regex":["\\b(jealous|talking to other (girls?|guys?))\\b"],"weights":{"E8":3,"D9":2}}
+{"id":"assurance.exclusive","any_regex":["\\b(only\\s+you|just\\s+you|you('?|’)re\\s+my\\s+only|all\\s+yours|just\\s+yours)\\b"],"weights":{"D8":2,"E1":1}}
+
+{"id":"commit.long_view","any_regex":["\\b(always|forever|for life|til(l)? the end|only you|you('?|’)re (my )?person)\\b"],"weights":{"E9":5,"D4":1}}
+{"id":"bond.symbols","any_regex":["[💍🔒❤️‍🔥]"],"weights":{"E9":2,"D4":1}}
+{"id":"values.loyalty","any_regex":["\\b(loyal|faithful|devoted|ride or die)\\b"],"weights":{"E9":3,"E8":1}}
+
+{"id":"status.gfe","any_regex":["\\b(girlfriend|boyfriend|\\bgf\\b|\\bbf\\b|my\\s+girl|my\\s+man)\\b"],"weights":{"D1":2,"D8":1,"G2":1}}
+{"id":"status.married_terms","any_regex":["\\b(wife|husband|wifey|hubby)\\b"],"none_regex":["\\bex-?wife\\b","\\bex-?husband\\b"],"weights":{"E1":2,"E4":2}}
+{"id":"marriage.future_talk","any_regex":["\\b(marry\\s+you|marriage|our\\s+wedding)\\b"],"weights":{"E4":3,"E9":2}}
+{"id":"circle.merge","any_regex":["\\b(introduce\\s+you\\s+to\\s+(my\\s+)?(friends?|mom|dad|parents|family))\\b"],"weights":{"E4":2,"D6":1}}
+{"id":"domestic.space","any_regex":["\\b(couch\\s+time|home\\s+cooking|our\\s+place)\\b"],"weights":{"E1":2}}
+{"id":"domestic.chat","any_regex":["\\b(cook(ing)?\\s+dinner|laundry|grocer(y|ies)|clean(ing)?)\\b"],"weights":{"E1":2,"E2":1}}
+{"id":"home.life_admin","any_regex":["\\b(grocer(y|ies)|laundry|dishes|cook dinner|clean up)\\b"],"weights":{"E2":4,"D7":1}}
+{"id":"calendar.light","any_regex":["\\b(appointment|dentist|doctor|therapy|session|meeting)\\b"],"weights":{"E2":4,"E5":1}}
+{"id":"schedule.shared","any_regex":["\\b(after\\s+work|on\\s+(lunch|break)|later\\s+tonight|tomorrow\\s+morning)\\b"],"weights":{"D6":2,"E2":3,"G7":1}}
+
+{"id":"memory.deeper_callback","any_regex":["\\b(remember when we|like we said|as we planned)\\b"],"weights":{"D3":3,"E4":2}}
+{"id":"inside_joke.marker","any_regex":["\\b(inside joke|our joke|our nickname)\\b"],"weights":{"D3":3,"D8":2}}
+
+{"id":"nickname.romance_any","any_regex":["\\b(babe|baby|honey|sweetheart|darling|love|my\\s+girl|my\\s+man|wifey|hubby|queen|princess|king)\\b"],"none_regex":["\\bkingdom\\b","\\bqueenstown\\b","\\bprincess\\s+diana\\b"],"weights":{"S3":1,"G2":1,"D1":2,"E1":2}}
+{"id":"possession.soft","any_regex":["\\b(my\\s+(girl|boy|queen|king|wifey|hubby))\\b"],"weights":{"D1":1,"D8":1,"E1":2}}
+
+{"id":"discovery.deeper","any_regex":["\\b(tell\\s+me\\s+more\\s+about\\s+(why|how)|what\\s+matters\\s+most\\s+to\\s+you|what\\s+do\\s+you\\s+care\\s+about\\s+most)\\b"],"weights":{"D2":3,"E3":2}}
+{"id":"values.talk","any_regex":["\\b(dreams\\s+for\\s+the\\s+future|life\\s+goals|purpose)\\b"],"weights":{"D2":2,"E4":2}}
+{"id":"support.words","any_regex":["\\b(proud\\s+of\\s+you|i\\s+believe\\s+in\\s+you|you\\s+got\\s+this)\\b"],"weights":{"D5":2,"E5":2}}
+{"id":"gratitude.intimacy","any_regex":["\\b(thank\\s+you\\s+for\\s+being\\s+there|i\\s+appreciate\\s+you)\\b"],"weights":{"D5":2,"E3":2}}
+{"id":"vulnerability.self","any_regex":["\\b(i('?|’)m\\s+(anxious|sad|lonely|depressed|stressed)|i\\s+need\\s+to\\s+talk|can\\s+i\\s+tell\\s+you\\s+something)\\b"],"weights":{"D5":2,"E3":3}}
+{"id":"trust.secret","any_regex":["\\b(can\\s+i\\s+tell\\s+you\\s+a\\s+secret|don('?|’)t\\s+tell\\s+anyone)\\b"],"weights":{"E3":3,"D5":1}}
+
+{"id":"ask.turnaround","any_regex":["\\b(turnaround|how long|when could you deliver|eta)\\b"],"weights":{"G3":2}}
+{"id":"ask.unblur","any_regex":["\\b(unblur|un-blur|clear(er)? version)\\b"],"weights":{"G4":2}}
+
+{"id":"schedule.tonight_tomorrow","any_regex":["\\b(tonight|tomorrow|later (tonight|today))\\b"],"weights":{"G7":1,"D6":1,"E2":1}}
+{"id":"schedule.specific_time","any_regex":["\\b(at|around)\\s?\\d{1,2}(:\\d{2})?\\s?(am|pm)\\b"],"weights":{"G7":1,"D6":1,"E2":1}}
+
+{"id":"money.boundary","any_regex":["\\b(budget|can('?|’)t\\s+spend\\s+much|money\\s+is\\s+tight)\\b"],"weights":{"E7":3,"G8":1}}
+{"id":"value.care","any_regex":["\\b(i\\s+want\\s+to\\s+support\\s+you\\s+but)\\b"],"weights":{"E7":2,"G8":1}}
+
+{"id":"status.long_distance","any_regex":["\\b(long distance|ldr)\\b"],"weights":{"D6":1,"E4":1}}
+{"id":"pets.family","any_regex":["\\b(our\\s+(dog|cat|puppy|kitty)|future\\s+(dog|cat))\\b"],"weights":{"E4":2}}

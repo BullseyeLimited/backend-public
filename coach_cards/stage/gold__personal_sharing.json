@@ -1,0 +1,19 @@
+{
+  "type": "stage_detector",
+  "name": "gold__personal_sharing",
+  "version": "0.2",
+  "inputs": "as_spec_v0_2",
+  "match": {
+    "must": [ "tier_is('gold')" ],
+    "should": [
+      { "if": "fan_text_any(['feel','lonely','nervous','anxious','stressed','proud','sorry'])", "add": 2 },
+      { "if": "affection_present()", "add": 1 },
+      { "if": "!price_intent()", "add": 1 }
+    ],
+    "must_not": [
+      "features.negativity > 0.7",
+      "explicit_request()"
+    ]
+  },
+  "thresholds": { "choose_if_score_gte": 3, "priority": 50 }
+}

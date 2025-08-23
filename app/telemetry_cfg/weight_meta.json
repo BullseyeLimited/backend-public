@@ -1,0 +1,15 @@
+{
+  "unknown_threshold": 1,
+  "fallback_stage_by_tier": {
+    "silver": "S2",
+    "gold":   "G2",
+    "diamond":"D2",
+    "emerald":"E1"
+  },
+  "stages_by_tier": {
+    "silver": ["S1","S2","S3","S4","S5","S6","S7","S8","S9"],
+    "gold":   ["G1","G2","G3","G4","G5","G6","G7","G8","G9"],
+    "diamond":["D1","D2","D3","D4","D5","D6","D7","D8","D9"],
+    "emerald":["E1","E2","E3","E4","E5","E6","E7","E8","E9"]
+  }
+}

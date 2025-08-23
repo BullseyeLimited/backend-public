@@ -1,0 +1,9 @@
+{"id":"G1","tier":"gold","name":"Afterglow Welcome","definition":"Immediately post‑payment; welcome/thanks/access checks; feel‑good confirmation."}
+{"id":"G2","tier":"gold","name":"Ongoing Engagement","definition":"Routine paid chat; positive feedback; casual small‑talk; no price talk."}
+{"id":"G3","tier":"gold","name":"Upgrade Curiosity","definition":"Asks about customs/menus/bundles, turnaround, inclusions, exclusivity."}
+{"id":"G4","tier":"gold","name":"Objection / Scope Clarify","definition":"Clarifies value/scope, asks for samples, expresses uncertainty or concern."}
+{"id":"G5","tier":"gold","name":"Upsell Decision (In Progress)","definition":"Green‑light for extra tip/custom/unlock right now; 'send it / do it'."}
+{"id":"G6","tier":"gold","name":"Repeat Commitment Confirmed","definition":"Another tip/unlock/renewal confirmed."}
+{"id":"G7","tier":"gold","name":"Renewal Planning","definition":"Talking about staying next month; scheduling future content or perks."}
+{"id":"G8","tier":"gold","name":"Churn Risk / Recovery","definition":"Cancel/refund talk; 'not worth'; unmet expectations."}
+{"id":"G9","tier":"gold","name":"Reconnection / Repair","definition":"Bridging back after wobble; apology/acknowledgment; resets tone."}

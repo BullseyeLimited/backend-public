@@ -1,0 +1,21 @@
+{
+  "type": "stage_detector",
+  "name": "gold__playful_flirtation",
+  "version": "0.2",
+  "inputs": "as_spec_v0_2",
+  "match": {
+    "must": [ "tier_is('gold')" ],
+    "should": [
+      { "if": "petname_present()", "add": 2 },
+      { "if": "affection_present()", "add": 1 },
+      { "if": "features.energy >= 0.45", "add": 1 },
+      { "if": "laughter_present()", "add": 1 }
+    ],
+    "must_not": [
+      "explicit_request()",
+      "features.sexual_cue > 0.70",
+      "features.negativity > 0.3"
+    ]
+  },
+  "thresholds": { "choose_if_score_gte": 3, "priority": 30 }
+}
