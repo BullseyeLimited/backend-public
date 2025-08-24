@@ -1,0 +1,19 @@
+{
+  "type": "stage_detector",
+  "name": "gold__boundary_testing",
+  "version": "0.2",
+  "inputs": "as_spec_v0_2",
+  "match": {
+    "must": [ "tier_is('gold')" ],
+    "should": [
+      { "if": "boundary_request_present()", "add": 2 },
+      { "if": "softener_present()", "add": 1 },
+      { "if": "!hostile_push_present()", "add": 1 }
+    ],
+    "must_not": [
+      "hostile_push_present()",
+      "features.negativity > 0.6"
+    ]
+  },
+  "thresholds": { "choose_if_score_gte": 3, "priority": 60 }
+}

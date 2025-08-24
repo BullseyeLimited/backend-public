@@ -1,0 +1,19 @@
+{
+  "type": "stage_detector",
+  "name": "gold__content_bonding",
+  "version": "0.2",
+  "inputs": "as_spec_v0_2",
+  "match": {
+    "must": [ "tier_is('gold')" ],
+    "should": [
+      { "if": "content_ref()", "add": 2 },
+      { "if": "laughter_present()", "add": 1 },
+      { "if": "!price_intent()", "add": 1 },
+      { "if": "features.energy >= 0.40", "add": 1 }
+    ],
+    "must_not": [
+      "features.negativity > 0.4"
+    ]
+  },
+  "thresholds": { "choose_if_score_gte": 3, "priority": 40 }
+}

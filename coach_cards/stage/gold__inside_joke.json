@@ -1,0 +1,20 @@
+{
+  "type": "stage_detector",
+  "name": "gold__inside_joke",
+  "version": "0.2",
+  "inputs": "as_spec_v0_2",
+  "match": {
+    "must": [ "tier_is('gold')" ],
+    "should": [
+      { "if": "laughter_present()", "add": 1 },
+      { "if": "fan_text_any(['remember','again','our '])", "add": 1 },
+      { "if": "affection_present()", "add": 1 },
+      { "if": "features.energy >= 0.35", "add": 1 }
+    ],
+    "must_not": [
+      "features.negativity > 0.4",
+      "price_intent()"
+    ]
+  },
+  "thresholds": { "choose_if_score_gte": 3, "priority": 90 }
+}

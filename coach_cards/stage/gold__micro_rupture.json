@@ -1,0 +1,18 @@
+{
+  "type": "stage_detector",
+  "name": "gold__micro_rupture",
+  "version": "0.2",
+  "inputs": "as_spec_v0_2",
+  "match": {
+    "must": [ "tier_is('gold')" ],
+    "should": [
+      { "if": "jealousy_trigger_present()", "add": 2 },
+      { "if": "features.negativity > 0.45", "add": 1 },
+      { "if": "fan_text_any(['it\\'s fine','whatever','ok.'])", "add": 1 }
+    ],
+    "must_not": [
+      "apology_present() && forgiveness_present()"
+    ]
+  },
+  "thresholds": { "choose_if_score_gte": 3, "priority": 70 }
+}

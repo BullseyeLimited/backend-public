@@ -1,0 +1,19 @@
+{
+  "type": "stage_detector",
+  "name": "gold__warm_lull",
+  "version": "0.2",
+  "inputs": "as_spec_v0_2",
+  "match": {
+    "must": [ "tier_is('gold')" ],
+    "should": [
+      { "if": "gap_hours() >= 8", "add": 2 },
+      { "if": "pre_signal_present() || warm_reentry_present()", "add": 1 },
+      { "if": "features.negativity < 0.3", "add": 1 }
+    ],
+    "must_not": [
+      "jealousy_trigger_present()",
+      "features.negativity > 0.5"
+    ]
+  },
+  "thresholds": { "choose_if_score_gte": 3, "priority": 95 }
+}
